@@ -1,4 +1,5 @@
-/* General Reset */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -9,28 +10,22 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: lightblue;
-    margin: 0;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: lightblue; /* Ensure the background covers the entire page */
+    margin: 0; /* Remove default margin */
 }
 
 a {
     text-decoration: none;
 }
 
-/* Hero Section */
 .hero {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    height: 100vh; /* Full viewport height */
 }
 
-/* Navigation */
 nav {
     display: flex;
     align-items: center;
@@ -45,12 +40,9 @@ nav {
     border: 2px solid #fd4766;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
 nav ul li {
+    list-style: none;
+    display: inline-block;
     padding: 10px 20px;
 }
 
@@ -79,27 +71,26 @@ nav ul li a:hover:after {
     width: 100%;
 }
 
-/* Content */
 .content {
     position: absolute;
     top: 35%;
     left: 8%;
-    color: #202020;
-    text-align: center; /* Center text */
+    color: #202020; /* Set text color for better visibility */
 }
 
 .content h1 {
-    color: #fd4766;
+    color: #1f1f25;
     font-size: 75px;
     font-weight: 900;
     line-height: 90px;
+    text-transform: inherit;
     width: 70%;
 }
 
 .content h2 {
-    color: #1f1f25;
-    font-size: 50px;
-    margin-top: 30px;
+    color: #1f1f25; /* Color for h2 headings */
+    font-size: 50px; /* Adjust size */
+    margin-top: 30px; /* Space above h2 */
 }
 
 .content p {
@@ -109,170 +100,250 @@ nav ul li a:hover:after {
     margin-bottom: 30px;
 }
 
-/* Skills Section */
 .skills-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items */
+    margin-top: 20px; /* Space above skills section */
 }
 
 .skills-list li {
-    background: #417796;
-    color: #f7f4f4;
-    margin: 10px;
-    padding: 15px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
+    background: #417796; /* Background for skill items */
+    color: #f7f4f4; /* Text color */
+    margin: 10px; /* Space between items */
+    padding: 15px 20px; /* Padding for item */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Animation on hover */
 }
 
 .skills-list li:hover {
-    background: #fd4766;
-    transform: translateY(-5px);
+    background: #fd4766; /* Change background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
-/* Services Section */
+.btn {
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spacing between letters */
+    padding: 16px 40px; /* Padding for button */
+    border-radius: 500px; /* Rounded corners */
+    display: inline-block; /* Display as inline block */
+    font-weight: 500; /* Font weight */
+    transition: all 0.4s ease-in-out; /* Transition effects */
+    background-color: #fd4766; /* Background color */
+    border: 2px solid #fd4766; /* Border color */
+}
+
+.btn:hover {
+    background: transparent; /* Background on hover */
+    border-color: #fd4766; /* Border color on hover */
+    color: #fd4766; /* Text color on hover */
+}
+
+.content h2, span {
+    color: #e2eaec; /* Set to pink */
+}
+
+.content h1, span {
+    color: #fd4766; /* Set to pink */
+    position: relative;
+}
+
+.content .title {
+    color: #0a0a0a; /* Text color */
+    font-size: 30px; /* Increase font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 4px; /* Spacing between letters */
+    display: inline-block; /* Display as inline block */
+    margin-bottom: 20px; /* Space below the title */
+    background: linear-gradient(
+        120deg,
+        #1c99fe 20.69%,
+        #7644ff 50.19%,
+        #fd4766 79.69%
+    ); /* Gradient background */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text fill transparent to show the gradient */
+}
+
 .services-section {
-    background-color: lightblue;
-    padding: 50px 0;
+    background-color: lightblue; /* Background color for the services section */
+    padding: 50px 0; /* Padding above and below */
+    text-align: center; /* Center the text */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .service {
-    max-width: 300px;
-    margin: 20px;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    max-width: 300px; /* Limit width for better readability */
+    margin: 20px; /* Space between service boxes */
+    background: #ffffff; /* White background for the service boxes */
+    padding: 20px; /* Padding for the boxes */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Animation on hover */
 }
 
 .service:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slightly increase size on hover */
 }
 
 .service h2 {
-    color: #1d1d24;
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: 600;
+    color: #1d1d24; /* Heading color */
+    font-size: 20px; /* Size for service headings */
+    margin-bottom: 10px; /* Space below the heading */
+    font-weight: 600; /* Semi-bold */
 }
 
 .service p {
-    color: #666;
-    margin-top: 10px;
+    color: #666; /* Text color for service descriptions */
+    margin-top: 10px; /* Space above paragraph */
 }
 
-/* Contact Section */
 .contact-info {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text */
+    margin: 50px auto; /* Adjust margin as needed */
+    padding: 20px; /* Add padding around */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.contact-info h2 {
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.menu {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
     align-items: center;
-    text-align: center;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    nav {
-        padding: 20px 50px;
-    }
-
-    .content h1 {
-        font-size: 60px;
-    }
-
-    .content h2 {
-        font-size: 40px;
-    }
-
-    .content p {
-        width: 70%;
-    }
+.menu .toggle {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    background: lightblue;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 1.25s;
+    z-index: 5;
 }
 
+.menu.active .toggle {
+    transform: rotate(360deg);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15),
+                0 0 0 2px #333,
+                0 0 0 8px #fff;
+}
+
+.menu li {
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transition: 0.5s;
+    transform: rotate(calc(360deg / 8 * var(--i)));
+    transform-origin: 140px;
+    scale: 0;
+    transition-delay: calc(0.05s * var(--i));
+}
+
+.menu.active li {
+    scale: 1;
+}
+
+.menu li a {
+    position: relative;
+    display: flex;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    width: 60px;
+    height: 60px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.75rem;
+    color: var(--clr);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #fd4766; /* Change background on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .content {
-        top: 25%;
-        left: 5%;
+        padding: 20px; /* Reduce padding for mobile */
     }
 
     .content h1 {
-        font-size: 50px;
-        width: 100%;
+        font-size: 50px; /* Smaller font size on mobile */
     }
 
     .content h2 {
-        font-size: 35px;
-    }
-
-    .content p {
-        width: 80%;
+        font-size: 40px; /* Smaller h2 on mobile */
     }
 
     .skills-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .services-section {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack skills vertically on mobile */
+        align-items: center; /* Center items */
     }
 
     .service {
-        max-width: 100%;
-        margin: 10px;
+        max-width: 90%; /* Allow service boxes to use more width on mobile */
     }
 }
 
 @media (max-width: 480px) {
-    nav {
-        padding: 10px;
-    }
-
-    .content {
-        top: 20%;
-        left: 5%;
-    }
-
     .content h1 {
-        font-size: 40px;
+        font-size: 30px; /* Further reduce font size */
     }
 
     .content h2 {
-        font-size: 30px;
+        font-size: 30px; /* Further reduce h2 size */
     }
 
-    .content p {
-        width: 90%;
+    .btn {
+        padding: 12px 20px; /* Smaller button on mobile */
     }
 
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
+    .menu {
+        width: 200px; /* Smaller menu on mobile */
+        height: 200px; /* Smaller menu */
     }
 
-    .service {
-        max-width: 90%;
+    .menu .toggle {
+        height: 50px; /* Smaller toggle */
+        width: 50px; /* Smaller toggle */
+    }
+
+    .menu li a {
+        width: 50px; /* Smaller icon */
+        height: 50px; /* Smaller icon */
+        font-size: 1.5rem; /* Smaller font size */
     }
 }
