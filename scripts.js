@@ -1,15 +1,16 @@
-// Example of smooth scrolling for navigation links
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevents the default anchor click behavior
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth' // Enables smooth scrolling
         });
     });
 });
 
-const menu=document.querySelector(".menu");
-const toggle=document.querySelector(".toggle");
-toggle.addEventListener("click",()=>{
-  menu.classList.toggle("active");
-})
+// Toggle menu functionality
+const menu = document.querySelector(".menu");
+const toggle = document.querySelector(".toggle");
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active"); // Toggles the 'active' class to show/hide the menu
+});
