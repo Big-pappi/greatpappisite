@@ -275,7 +275,7 @@ nav ul li a:hover:after {
 .menu li a {
     position: relative;
     display: flex;
-    transform: rotate(calc(360deg / -8 * var(--i)));
+    transform: rotate(calc(0deg / -8 * var(--i)));
     width: 60px;
     height: 60px;
     background-color: lightblue; /* Background color for menu items */
