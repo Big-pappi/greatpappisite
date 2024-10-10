@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,24 +14,26 @@ body {
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     min-height: 100vh; /* Full height of the viewport */
-    background-color: lightblue; /* Ensure the background covers the entire page */
-    margin: 0; /* Remove default margin */
+    background-color: lightblue; /* Background color */
 }
 
+/* Link Styles */
 a {
     text-decoration: none;
 }
 
+/* Hero Section */
 .hero {
     width: 100%;
     height: 100vh; /* Full viewport height */
 }
 
+/* Navigation Styles */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 100px;
+    padding: 30px 100px; /* Responsive padding */
 }
 
 .logo img {
@@ -40,22 +43,27 @@ nav {
     border: 2px solid #fd4766;
 }
 
-nav ul li {
+nav ul {
+    display: flex;
     list-style: none;
-    display: inline-block;
-    padding: 10px 20px;
+}
+
+nav ul li {
+    padding: 10px 20px; /* Padding for navigation items */
 }
 
 nav ul li a {
     color: #1d1d24;
     position: relative;
     padding: 5px 0;
+    transition: color 0.3s; /* Smooth color transition */
 }
 
 nav ul li a:hover {
-    color: #fd4766;
+    color: #fd4766; /* Change color on hover */
 }
 
+/* Hover Animation for Links */
 nav ul li a:after {
     content: "";
     position: absolute;
@@ -63,14 +71,15 @@ nav ul li a:after {
     width: 0;
     height: 3px;
     background: #fd4766;
-    transition: 0.3s;
+    transition: width 0.3s;
     bottom: 0;
 }
 
 nav ul li a:hover:after {
-    width: 100%;
+    width: 100%; /* Animate underline */
 }
 
+/* Content Styles */
 .content {
     position: absolute;
     top: 35%;
@@ -83,7 +92,6 @@ nav ul li a:hover:after {
     font-size: 75px;
     font-weight: 900;
     line-height: 90px;
-    text-transform: inherit;
     width: 70%;
 }
 
@@ -100,6 +108,7 @@ nav ul li a:hover:after {
     margin-bottom: 30px;
 }
 
+/* Skills List */
 .skills-list {
     list-style-type: none; /* Remove bullet points */
     padding: 0; /* Remove padding */
@@ -124,6 +133,7 @@ nav ul li a:hover:after {
     transform: translateY(-5px); /* Lift effect on hover */
 }
 
+/* Button Styles */
 .btn {
     color: #fff; /* Text color */
     font-size: 16px; /* Font size */
@@ -144,15 +154,7 @@ nav ul li a:hover:after {
     color: #fd4766; /* Text color on hover */
 }
 
-.content h2, span {
-    color: #e2eaec; /* Set to pink */
-}
-
-.content h1, span {
-    color: #fd4766; /* Set to pink */
-    position: relative;
-}
-
+/* Title Styles */
 .content .title {
     color: #0a0a0a; /* Text color */
     font-size: 30px; /* Increase font size */
@@ -160,16 +162,12 @@ nav ul li a:hover:after {
     letter-spacing: 4px; /* Spacing between letters */
     display: inline-block; /* Display as inline block */
     margin-bottom: 20px; /* Space below the title */
-    background: linear-gradient(
-        120deg,
-        #1c99fe 20.69%,
-        #7644ff 50.19%,
-        #fd4766 79.69%
-    ); /* Gradient background */
+    background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%);
     -webkit-background-clip: text; /* Clip the background to the text */
     -webkit-text-fill-color: transparent; /* Make the text fill transparent to show the gradient */
 }
 
+/* Services Section */
 .services-section {
     background-color: lightblue; /* Background color for the services section */
     padding: 50px 0; /* Padding above and below */
@@ -205,6 +203,7 @@ nav ul li a:hover:after {
     margin-top: 10px; /* Space above paragraph */
 }
 
+/* Contact Information */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -224,6 +223,7 @@ nav ul li a:hover:after {
     margin: 5px 0; /* Space between paragraphs */
 }
 
+/* Menu Styles */
 .menu {
     position: relative;
     width: 280px;
@@ -239,7 +239,7 @@ nav ul li a:hover:after {
     width: 60px;
     background: lightblue;
     border-radius: 50%;
-    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,7 +252,7 @@ nav ul li a:hover:after {
 
 .menu.active .toggle {
     transform: rotate(360deg);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.15),
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15),
                 0 0 0 2px #333,
                 0 0 0 8px #fff;
 }
@@ -261,7 +261,7 @@ nav ul li a:hover:after {
     position: absolute;
     left: 0;
     list-style: none;
-    transition: 0.5s;
+    transition: scale 0.5s;
     transform: rotate(calc(360deg / 8 * var(--i)));
     transform-origin: 140px;
     scale: 0;
@@ -278,15 +278,12 @@ nav ul li a:hover:after {
     transform: rotate(calc(360deg / -8 * var(--i)));
     width: 60px;
     height: 60px;
-    background-color: lightblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 1.75rem;
-    color: var(--clr);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
+    background-color: lightblue; /* Background color for menu items */
+    border-radius: 50%; /* Rounded corners for menu items */
+    color: #333; /* Text color for menu items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .menu li a:hover {
@@ -294,56 +291,79 @@ nav ul li a:hover:after {
     color: #fff; /* Change text color on hover */
 }
 
-/* Responsive Styles */
+/* Footer Styles */
+footer {
+    width: 100%; /* Full width */
+    background-color: #1d1d24; /* Dark background for footer */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding for footer */
+    position: relative; /* Position relative for positioning child elements */
+}
+
+footer p {
+    margin: 0; /* No margin for footer paragraph */
+}
+
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     nav {
-        padding: 20px; /* Reduce padding for mobile */
+        padding: 15px 50px; /* Adjust padding for smaller screens */
     }
 
     .content h1 {
-        font-size: 50px; /* Smaller font size on mobile */
+        font-size: 50px; /* Smaller font size for h1 */
+        line-height: 60px; /* Adjust line height */
     }
 
     .content h2 {
-        font-size: 40px; /* Smaller h2 on mobile */
+        font-size: 30px; /* Smaller font size for h2 */
+    }
+
+    .content p {
+        width: 90%; /* Full width for paragraphs */
     }
 
     .skills-list {
-        flex-direction: column; /* Stack skills vertically on mobile */
+        flex-direction: column; /* Stack skills vertically */
         align-items: center; /* Center items */
     }
 
+    .services-section {
+        padding: 30px 0; /* Reduce padding */
+    }
+
     .service {
-        max-width: 90%; /* Allow service boxes to use more width on mobile */
+        max-width: 100%; /* Full width for service boxes */
+    }
+
+    .menu {
+        width: 200px; /* Adjust menu width */
+        height: 200px; /* Adjust menu height */
     }
 }
 
 @media (max-width: 480px) {
     .content h1 {
-        font-size: 30px; /* Further reduce font size */
+        font-size: 30px; /* Further reduce font size for h1 */
+        line-height: 40px; /* Adjust line height */
     }
 
     .content h2 {
-        font-size: 30px; /* Further reduce h2 size */
+        font-size: 24px; /* Further reduce font size for h2 */
+    }
+
+    .skills-list li {
+        padding: 10px; /* Reduce padding for skill items */
     }
 
     .btn {
-        padding: 12px 20px; /* Smaller button on mobile */
+        font-size: 14px; /* Smaller button font size */
+        padding: 12px 30px; /* Smaller button padding */
     }
 
     .menu {
-        width: 200px; /* Smaller menu on mobile */
-        height: 200px; /* Smaller menu */
-    }
-
-    .menu .toggle {
-        height: 50px; /* Smaller toggle */
-        width: 50px; /* Smaller toggle */
-    }
-
-    .menu li a {
-        width: 50px; /* Smaller icon */
-        height: 50px; /* Smaller icon */
-        font-size: 1.5rem; /* Smaller font size */
+        width: 150px; /* Further adjust menu width */
+        height: 150px; /* Further adjust menu height */
     }
 }
