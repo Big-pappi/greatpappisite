@@ -82,7 +82,23 @@
         </li>
     </div>
 
-    <scripts src="scripts.js"></script>
+    <script>
+        // Example of smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        const menu=document.querySelector(".menu");
+        const toggle=document.querySelector(".toggle");
+        toggle.addEventListener("click",()=>{
+          menu.classList.toggle("active");
+        }) 
+    </script>
 
 <!-- partial -->
   <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
